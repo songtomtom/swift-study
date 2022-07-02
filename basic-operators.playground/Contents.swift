@@ -132,7 +132,7 @@ print(range)
  논리 연산자(Logical Operators)
  */
 // 논리 부정 연산자(Logical NOT Operator)
-let allowEntry = false
+let allowedEntry = false
 if !allowedEntry {
     print("ACCESS DENIED")
 }
