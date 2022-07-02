@@ -9,6 +9,7 @@
 /* Begin PBXFileReference section */
 		DD3EB3562870BECE0031089B /* basic-operators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "basic-operators.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DD3EB3572870C5DE0031089B /* strings-and-characters.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "strings-and-characters.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DD3EB3582870CD710031089B /* collection-types.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "collection-types.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -17,6 +18,7 @@
 			children = (
 				DD3EB3562870BECE0031089B /* basic-operators.playground */,
 				DD3EB3572870C5DE0031089B /* strings-and-characters.playground */,
+				DD3EB3582870CD710031089B /* collection-types.playground */,
 			);
 			sourceTree = "<group>";
 		};
