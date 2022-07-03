@@ -14,13 +14,15 @@
 		DD9E4C922871411D00EF66E5 /* closures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = closures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DD9E4C9328718A5500EF66E5 /* enumerations.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = enumerations.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DD9E4C9428718E1700EF66E5 /* classes-and-sturctures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "classes-and-sturctures.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		DD9E4C95287190F000EF66E5 /* stored-properties.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "stored-properties.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DD9E4C95287190F000EF66E5 /* properties.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = properties.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DD9E4C96287197F100EF66E5 /* methods.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = methods.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		DD3EB34E2870B1F60031089B = {
 			isa = PBXGroup;
 			children = (
+				DD9E4C96287197F100EF66E5 /* methods.playground */,
 				DD3EB3562870BECE0031089B /* basic-operators.playground */,
 				DD3EB3572870C5DE0031089B /* strings-and-characters.playground */,
 				DD3EB3582870CD710031089B /* collection-types.playground */,
@@ -28,7 +30,7 @@
 				DD9E4C922871411D00EF66E5 /* closures.playground */,
 				DD9E4C9328718A5500EF66E5 /* enumerations.playground */,
 				DD9E4C9428718E1700EF66E5 /* classes-and-sturctures.playground */,
-				DD9E4C95287190F000EF66E5 /* stored-properties.playground */,
+				DD9E4C95287190F000EF66E5 /* properties.playground */,
 			);
 			sourceTree = "<group>";
 		};
