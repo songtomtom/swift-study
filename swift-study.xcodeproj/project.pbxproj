@@ -18,6 +18,8 @@
 		DD9E4C96287197F100EF66E5 /* methods.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = methods.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DD9E4C972871AB3F00EF66E5 /* subscripts.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = subscripts.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DD9E4C982871AD7800EF66E5 /* Inheritance.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Inheritance.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DD9E4C992871AEF000EF66E5 /* initialization.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = initialization.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DD9E4C9A2871FDF100EF66E5 /* deinitialization.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = deinitialization.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -35,6 +37,8 @@
 				DD9E4C96287197F100EF66E5 /* methods.playground */,
 				DD9E4C972871AB3F00EF66E5 /* subscripts.playground */,
 				DD9E4C982871AD7800EF66E5 /* Inheritance.playground */,
+				DD9E4C992871AEF000EF66E5 /* initialization.playground */,
+				DD9E4C9A2871FDF100EF66E5 /* deinitialization.playground */,
 			);
 			sourceTree = "<group>";
 		};
