@@ -12,17 +12,19 @@
 		DD3EB3582870CD710031089B /* collection-types.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "collection-types.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DD3EB3592870D1F50031089B /* functions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = functions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DD9E4C922871411D00EF66E5 /* closures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = closures.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DD9E4C9328718A5500EF66E5 /* enumerations.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = enumerations.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		DD3EB34E2870B1F60031089B = {
 			isa = PBXGroup;
 			children = (
-				DD9E4C922871411D00EF66E5 /* closures.playground */,
 				DD3EB3562870BECE0031089B /* basic-operators.playground */,
 				DD3EB3572870C5DE0031089B /* strings-and-characters.playground */,
 				DD3EB3582870CD710031089B /* collection-types.playground */,
 				DD3EB3592870D1F50031089B /* functions.playground */,
+				DD9E4C922871411D00EF66E5 /* closures.playground */,
+				DD9E4C9328718A5500EF66E5 /* enumerations.playground */,
 			);
 			sourceTree = "<group>";
 		};
