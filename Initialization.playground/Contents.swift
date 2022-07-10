@@ -5,10 +5,12 @@
 
 struct Fahrenheit {
     var temperature: Double
+
     init() {
         temperature = 32.0
     }
 }
+
 var f = Fahrenheit()
 print("The default temperature is \(f.temperature)° Fahrenheit")
 
@@ -22,13 +24,16 @@ print("The default temperature is \(f.temperature)° Fahrenheit")
 // 초기화 파라미터 (Initialization Parameters)
 struct Celsius {
     var temperatureInCelsius: Double
+
     init(fromFahrenheit fahrenheit: Double) {
         temperatureInCelsius = (fahrenheit - 32.0) / 1.8
     }
+
     init(fromKelvin kelvin: Double) {
         temperatureInCelsius = kelvin - 273.15
     }
 }
+
 let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
 let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 
@@ -36,17 +41,20 @@ let freezingPointOfWater = Celsius(fromKelvin: 273.15)
 // 파라미터 이름과 인자 레이블 (Parameter Names and Argument Labels)
 struct Color {
     let red, green, blue: Double
+
     init(red: Double, green: Double, blue: Double) {
         self.red = red
         self.green = green
         self.blue = blue
     }
+
     init(white: Double) {
         red = white
         green = white
         blue = white
     }
 }
+
 let magenta = Color(red: 1.0, green: 0.0, blue: 1.0)
 let halfGray = Color(white: 0.5)
 //let veryGreen = Color(0.0, 1.0, 0.0)
@@ -55,28 +63,36 @@ let halfGray = Color(white: 0.5)
 
 struct Celsius2 {
     var temperatureInCelsius: Double
+
     init(fromFahrenheit fahrenheit: Double) {
         temperatureInCelsius = (fahrenheit - 32.0) / 1.8
     }
+
     init(fromKelvin kelvin: Double) {
         temperatureInCelsius = kelvin - 273.15
     }
+
     init(_ celsius: Double) {
         temperatureInCelsius = celsius
     }
 }
+
 let bodyTemperature = Celsius2(37.0)
+
 // 옵셔널 프로퍼티 타입 (Optional Property Types)
 class SurveyQuestion {
     var text: String
     var response: String?
+
     init(text: String) {
         self.text = text
     }
+
     func ask() {
         print(text)
     }
 }
+
 let cheeseQuestion = SurveyQuestion(text: "Do you like cheese?")
 cheeseQuestion.ask()
 cheeseQuestion.response = "Yes, I do like cheese."
@@ -95,11 +111,14 @@ class ShoppingListItem {
     var quantity = 1
     var purchased = false
 }
+
 var item = ShoppingListItem()
+
 // 구조체 타입을 위한 맴버쪽 이니셜라이저 (Memberwise Initializers for Structure Types)
 struct Size {
     var width = 0.0, height = 0.0
 }
+
 let twoByTwo = Size(width: 2.0, height: 2.0)
 
 /*
@@ -109,20 +128,26 @@ let twoByTwo = Size(width: 2.0, height: 2.0)
 struct Point {
     var x = 0.0, y = 0.0
 }
+
 struct Rect {
     var origin = Point()
     var size = Size()
-    init() { }
+
+    init() {
+    }
+
     init(origin: Point, size: Size) {
         self.origin = origin
         self.size = size
     }
+
     init(center: Point, size: Size) {
         let originX = center.x - (size.width / 2)
         let originY = center.y - (size.height / 2)
         self.init(origin: Point(x: originX, y: originY), size: size)
     }
 }
+
 let basicRect = Rect()
 let originRect = Rect(origin: Point(x: 2.0, y: 2.0), size: Size(width: 5.0, height: 5.0))
 let centerRect = Rect(center: Point(x: 4.0, y: 4.0), size: Size(width: 3.0, height: 3.0))
@@ -136,6 +161,7 @@ class Vehicle {
         return "\(numberOfWheels) wheel(s)"
     }
 }
+
 let vehicle = Vehicle()
 print("Vehicle: \(vehicle.description)")
 
@@ -145,6 +171,7 @@ class Bicycle: Vehicle {
         numberOfWheels = 2
     }
 }
+
 let bicycle = Bicycle()
 print("Bicycle: \(bicycle.description)")
 
@@ -152,9 +179,11 @@ print("Bicycle: \(bicycle.description)")
 
 class Food {
     var name: String
+
     init(name: String) {
         self.name = name
     }
+
     convenience init() {
         self.init(name: "[Unnamed]")
     }
@@ -165,17 +194,21 @@ let mysteryMeat = Food()
 
 class RecipeIngredient: Food {
     var quantity: Int
+
     init(name: String, quantity: Int) {
         self.quantity = quantity
         super.init(name: name)
     }
+
     override convenience init(name: String) {
         self.init(name: name, quantity: 1)
     }
 }
+
 let oneMysteryItem = RecipeIngredient()
 let oneBacon = RecipeIngredient(name: "Bacon")
 let sixEggs = RecipeIngredient(name: "Eggs", quantity: 6)
+
 class ShoppingListItem2: RecipeIngredient {
     var purchased = false
     var description: String {
@@ -215,8 +248,11 @@ if valueChanged == nil {
 
 struct Animal {
     let species: String
+
     init?(species: String) {
-        if species.isEmpty { return nil }
+        if species.isEmpty {
+            return nil
+        }
         self.species = species
     }
 }
@@ -236,6 +272,7 @@ if anonymousCreature == nil {
 // 열거형에서 사용하는 실패 가능한 초기자 (Failable Initializers for Enumerations)
 enum TemperatureUnit2 {
     case kelvin, celsius, fahrenheit
+
     init?(symbol: Character) {
         switch symbol {
         case "K":
@@ -249,6 +286,7 @@ enum TemperatureUnit2 {
         }
     }
 }
+
 let fahrenheitUnit2 = TemperatureUnit2(symbol: "F")
 if fahrenheitUnit2 != nil {
     print("This is a defined temperature unit, so initialization succeeded.")
@@ -279,20 +317,27 @@ if unknownUnit3 == nil {
 
 class Product {
     let name: String
+
     init?(name: String) {
-        if name.isEmpty { return nil }
+        if name.isEmpty {
+            return nil
+        }
         self.name = name
     }
 }
 
 class CartItem: Product {
     let quantity: Int
+
     init?(name: String, quantity: Int) {
-        if quantity < 1 { return nil }
+        if quantity < 1 {
+            return nil
+        }
         self.quantity = quantity
         super.init(name: name)
     }
 }
+
 if let zeroShirts = CartItem(name: "shirt", quantity: 0) {
     print("Item: \(zeroShirts.name), quantity: \(zeroShirts.quantity)")
 } else {
@@ -308,9 +353,14 @@ if let oneUnnamed = CartItem(name: "", quantity: 1) {
 // 실패 가능한 초기자의 오버라이딩 (Overriding a Failable Initializer)
 class Document {
     var name: String?
-    init() { }
+
+    init() {
+    }
+
     init?(name: String) {
-        if name.isEmpty { return nil }
+        if name.isEmpty {
+            return nil
+        }
         self.name = name
     }
 }
@@ -320,6 +370,7 @@ class AutomaticallyNamedDocument: Document {
         super.init()
         self.name = "[Untitled]"
     }
+
     override init(name: String) {
         super.init()
         if name.isEmpty {
@@ -340,11 +391,13 @@ class UntitledDocument: Document {
  필수 초기자 (Required Initializers)
  */
 class SomeClass {
-    required init() { }
+    required init() {
+    }
 }
 
 class SomeSubclass: SomeClass {
-    required init() { }
+    required init() {
+    }
 }
 
 /*
@@ -363,6 +416,7 @@ struct Chessboard {
         }
         return temporaryBoard
     }()
+
     func squareIsBlackAt(row: Int, column: Int) -> Bool {
         return boardColors[(row * 8) + column]
     }

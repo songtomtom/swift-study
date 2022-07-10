@@ -41,7 +41,6 @@ enum CompassPoint {
 }
 
 
-
 var currentDirection = CompassPoint.west
 let rememberedDirection = currentDirection
 currentDirection = .east

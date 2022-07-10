@@ -5,6 +5,7 @@ func greet(person: String) -> String {
     let greeting = "Hello, " + person + "!"
     return greeting
 }
+
 print(greet(person: "Anna"))
 print(greet(person: "Brian"))
 
@@ -12,6 +13,7 @@ print(greet(person: "Brian"))
 func greetAgain(person: String) -> String {
     return "Hello again, " + person + "!"
 }
+
 print(greetAgain(person: "Anna"))
 
 
@@ -22,6 +24,7 @@ print(greetAgain(person: "Anna"))
 func sayHelloWorld() -> String {
     return "hello, world"
 }
+
 print(sayHelloWorld())
 
 
@@ -33,6 +36,7 @@ func greet2(person: String, alreadyGreeted: Bool) -> String {
         return greet(person: person)
     }
 }
+
 print(greet2(person: "Tim", alreadyGreeted: true))
 
 // 반환 값이 없는 함수 (Functions Without Return Values)
@@ -40,15 +44,18 @@ print(greet2(person: "Tim", alreadyGreeted: true))
 func greet3(person: String) {
     print("Hello, \(person)!")
 }
+
 greet3(person: "Dave")
 
 func printAndCount(string: String) -> Int {
     print(string)
     return string.count
 }
+
 func printWithoutCounting(string: String) {
     let _ = printAndCount(string: string)
 }
+
 printAndCount(string: "hello, world")
 printWithoutCounting(string: "hello, world")
 
@@ -71,7 +78,9 @@ print("min is \(bounds.min) and max is \(bounds.max)")
 
 // 옵셔널 튜플 반환형 (Optional Tuple Return Types)
 func minMax2(array: [Int]) -> (min: Int, max: Int)? {
-    if array.isEmpty { return nil }
+    if array.isEmpty {
+        return nil
+    }
     var currentMin = array[0]
     var currentMax = array[0]
     for value in array[1..<array.count] {
@@ -89,20 +98,27 @@ if let bounds = minMax2(array: [8, -6, 2, 109, 3, 71]) {
 }
 
 // 함수 인자 라벨과 파라미터 이름 (Function Argument Labels and Parameter Names)
-func someFunction(firstParameterName: Int, secondParameterName: Int) { }
+func someFunction(firstParameterName: Int, secondParameterName: Int) {
+}
+
 someFunction(firstParameterName: 1, secondParameterName: 2)
 
 func greet4(person: String, from hometown: String) -> String {
     return "Hello \(person)!  Glad you could visit from \(hometown)."
 }
+
 print(greet4(person: "Bill", from: "Cupertino"))
 
 // 인자 생략 (Omitting Argument Labels)
-func someFunction(_ firstParameterName: Int, secondParameterName: Int) { }
+func someFunction(_ firstParameterName: Int, secondParameterName: Int) {
+}
+
 someFunction(1, secondParameterName: 2)
 
 // 기본 파라미터 값 (Default Parameter Values)
-func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) { }
+func someFunction(parameterWithoutDefault: Int, parameterWithDefault: Int = 12) {
+}
+
 someFunction(parameterWithoutDefault: 3, parameterWithDefault: 6)
 someFunction(parameterWithoutDefault: 4)
 
@@ -114,6 +130,7 @@ func arithmeticMean(_ numbers: Double...) -> Double {
     }
     return total / Double(numbers.count)
 }
+
 arithmeticMean(1, 2, 3, 4, 5)
 arithmeticMean(3, 8.25, 18.75)
 
@@ -136,9 +153,11 @@ print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
 func addTwoInts(_ a: Int, _ b: Int) -> Int {
     return a + b
 }
+
 func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
     return a * b
 }
+
 func printHelloWorld() {
     print("hello, world")
 }
@@ -154,12 +173,14 @@ let anotherMathFunction = addTwoInts
 func printMathResult(_ mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
     print("Result: \(mathFunction(a, b))")
 }
+
 printMathResult(addTwoInts, 3, 5)
 
 // 반환 형으로써의 함수 형 (Function Types as Return Types)
 func stepForward(_ input: Int) -> Int {
     return input + 1
 }
+
 func stepBackward(_ input: Int) -> Int {
     return input - 1
 }
@@ -183,10 +204,17 @@ print("zero!")
  중첩 함수 (Nested Functions)
  */
 func chooseStepFunction(backward: Bool) -> (Int) -> Int {
-    func stepForward(input: Int) -> Int { return input + 1 }
-    func stepBackward(input: Int) -> Int { return input - 1 }
+    func stepForward(input: Int) -> Int {
+        return input + 1
+    }
+
+    func stepBackward(input: Int) -> Int {
+        return input - 1
+    }
+
     return backward ? stepBackward : stepForward
 }
+
 var currentValue = -4
 let moveNearerToZero = chooseStepFunction(backward: currentValue > 0)
 // moveNearerToZero는 이제 중첩 돼 있는 stepForward() 함수를 가르킵니다.
